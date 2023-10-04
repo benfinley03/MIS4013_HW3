@@ -16,7 +16,7 @@ while ($poke = $pokemon->fetch_assoc()) {
     <td><?php echo $poke['PokemonID']; ?></td>
     <td><?php echo $poke['PokemonName']; ?></td>
     <td><?php echo $poke['PokemonDesc']; ?></td>
-    <td><a href="types-of-pokemon.php?id=<?php echo $poke['PokemonID']; ?>">Types</a></td>
+    <td><a href="types-of-pokemon.php?id=<?php echo $poke['PokemonID']; ?>">Type</a></td>
   </tr>
 <?php  
 }
