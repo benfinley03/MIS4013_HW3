@@ -2,7 +2,7 @@
 function selectMoves() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT * FROM Moves;");
+        $stmt = $conn->prepare("SELECT MoveID, MoveName FROM Moves;");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
