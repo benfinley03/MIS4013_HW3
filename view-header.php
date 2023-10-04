@@ -20,8 +20,7 @@
         <a class="nav-link" href="pokemon.php">Pokemon</a>
         <a class="nav-link" href="type.php">Type</a>
         <a class="nav-link" href="moves.php">Moves</a>
-        <a class="nav-link" href="poketype.php">Pokemon and Types</a>
-        <a class="nav-link" href="pokemove.php">Pokemon and Moves</a>
+
       </div>
     </div>
   </div>
