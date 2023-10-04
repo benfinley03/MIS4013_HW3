@@ -17,8 +17,12 @@ while ($poke = $pokemon->fetch_assoc()) {
     <td><?php echo $poke['PokemonName']; ?></td>
     <td><?php echo $poke['PokemonDesc']; ?></td>
     <td><a href="types-of-pokemon.php?id=<?php echo $poke['PokemonID']; ?>">Type</a></td>
-    <td><a href="moves-of-pokemon.php?id=<?php echo $poke['PokemonID']; ?>">Moves</a></td>
-
+    <td>
+      <form method = "post" action="moves-of-pokemon.php">
+        <input type="hidden" name="mid" value = "<?php echo $poke['PokemonID']; ?>">
+        <button type="submit" class="btn btn-primary">Moves</button>
+      </form>
+    </td>
   </tr>
 <?php  
 }
