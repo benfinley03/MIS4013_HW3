@@ -20,7 +20,6 @@ while ($moves = $pokemonMoves->fetch_assoc()) {
   ?>     
       </ul>  
       </p>
-      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
     </div>
   </div>
   <tr>
