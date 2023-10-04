@@ -14,7 +14,7 @@ while ($type = $typeOfPokemon->fetch_assoc()) {
 ?> 
   <tr>
   <td><?php echo $type['PokemonName']; ?></td>
-  <td><?php echo $type['Type']; ?></td>
+  <td><?php echo $type['TypeName']; ?></td>
   <td><?php echo $type['Type2']; ?></td>
   </tr>
 <?php  
