@@ -12,7 +12,7 @@
     </thead>
     <tbody>
 <?php
-while ($move = $moves->fetch_assoc()) {
+while ($move = moveOfPokemon->fetch_assoc()) {
 ?> 
   <tr>
   <td><?php echo $move['PokemonID']; ?></td>
