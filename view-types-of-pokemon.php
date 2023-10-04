@@ -1,4 +1,4 @@
-<h1>Types</h1>
+<h1>Pokemon Types</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
