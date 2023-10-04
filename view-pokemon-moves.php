@@ -15,15 +15,17 @@ while ($moves = $pokemonMoves->fetch_assoc()) {
     <div class="card-body">
       <h5 class="card-title"><?php echo $moves['PokemonName']; ?></h5>
       <p class="card-text">
+      <ul class="list-group"> 
 <?php
   $moves= selectPokemonMoves($moves['PokemonID']);
   while ($course = $moves->fetch_assoc()) {
   ?>
+      <li class="list-group-item"><?php echo $move['MoveName']; ?> - <?php echo $move['MovePower']; ?> - <?php echo $move['MoveAccuracy']; ?></li>
+      
   <?php
-        
-    
   }
-  ?>      
+  ?>     
+      </ul>  
       </p>
       <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
     </div>
