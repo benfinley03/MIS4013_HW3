@@ -2,7 +2,7 @@
 function selectPokemonMoves() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("Select p.PokemonName, m.MoveName, m.MovePower, m.MoveAccuracy
+        $stmt = $conn->prepare("Select p.PokemonID, p.PokemonName, m.MoveName, m.MovePower, m.MoveAccuracy
 From Moves m JOIN PokeMove_Relationship pm on m.MoveID = pm.MoveID
 				JOIN Pokemon p on pm.PokemonID = p.PokemonID");
         $stmt->execute();
