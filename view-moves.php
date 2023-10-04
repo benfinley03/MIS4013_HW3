@@ -11,13 +11,13 @@
     </thead>
     <tbody>
 <?php
-while ($poke = $pokemon->fetch_assoc()) {
+while ($move = $moves->fetch_assoc()) {
 ?> 
   <tr>
-    <td><?php echo $poke['MoveID']; ?></td>
-    <td><?php echo $poke['MoveName']; ?></td>
-    <td><?php echo $poke['MovePower']; ?></td>
-    <td><?php echo $poke['MoveAccuracy']; ?></td>
+    <td><?php echo $move['MoveID']; ?></td>
+    <td><?php echo $move['MoveName']; ?></td>
+    <td><?php echo $move['MovePower']; ?></td>
+    <td><?php echo $move['MoveAccuracy']; ?></td>
   </tr>
 <?php  
 }
