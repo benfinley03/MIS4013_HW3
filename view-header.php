@@ -17,10 +17,11 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-        <a class="nav-link" href="post.php">Post</a>
-        <a class="nav-link" href="post-results.php">Post result</a>
-        <a class="nav-link" href="get.php">Get</a>
-        <a class="nav-link" href="get-result.php">Get result</a>
+        <a class="nav-link" href="pokemon.php">Pokemon</a>
+        <a class="nav-link" href="type.php">Type</a>
+        <a class="nav-link" href="moves.php">Moves</a>
+        <a class="nav-link" href="poketype.php">Pokemon and Types</a>
+        <a class="nav-link" href="pokemove.php">Pokemon and Moves</a>
       </div>
     </div>
   </div>
