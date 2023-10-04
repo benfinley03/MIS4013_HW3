@@ -1,5 +1,5 @@
 <?php
-function selectTypeOfPokemon($PokemonID) {
+function selectTypeOfPokemon($pid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT p.PokemonName, t.TypeName, 
@@ -8,7 +8,7 @@ function selectTypeOfPokemon($PokemonID) {
                                 FROM Type t JOIN PokeType_Relationship pt on t.TypeID = pt.TypeID 
 			                          JOIN Pokemon p on pt.PokemonID = p.PokemonID
 			     	Where p.PokemonID=?");
-        $stmt->bind_param("i", $PokemonID);
+        $stmt->bind_param("i", $pid);
 	$stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
