@@ -1,5 +1,5 @@
 <?php
-function selectTypeOfPokemon() {
+function selectTypeOfPokemon($PokemonID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT p.PokemonName, t.TypeName, 
