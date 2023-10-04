@@ -6,8 +6,9 @@ function selectTypeOfPokemon() {
 		                              (SELECT t.TypeName From Type t JOIN PokeType_Relationship pt on t.TypeID = pt.TypeID 
      		                            WHERE pt.Second_TypeID is NOT null and pt.PokemonID = p.PokemonID) as Type2
                                 FROM Type t JOIN PokeType_Relationship pt on t.TypeID = pt.TypeID 
-			                          JOIN Pokemon p on pt.PokemonID = p.PokemonID ");
-        $stmt->bind_param("p", $PokemonName);
+			                          JOIN Pokemon p on pt.PokemonID = p.PokemonID
+			     	Where p.PokemonID=?");
+        $stmt->bind_param("?", $PokemonID);
 	$stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
