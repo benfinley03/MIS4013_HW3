@@ -9,11 +9,11 @@
     </thead>
     <tbody>
 <?php
-while ($move = $moves->fetch_assoc()) {
+while ($type = $types->fetch_assoc()) {
 ?> 
   <tr>
-  <td><?php echo $move['TypeID']; ?></td>
-  <td><?php echo $move['TypeName']; ?></td>
+  <td><?php echo $type['TypeID']; ?></td>
+  <td><?php echo $type['TypeName']; ?></td>
   </tr>
 <?php  
 }
