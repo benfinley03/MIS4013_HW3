@@ -10,7 +10,7 @@
     </thead>
     <tbody>
 <?php
-while ($type = $types->fetch_assoc()) {
+while ($type = $typeofPokemon->fetch_assoc()) {
 ?> 
   <tr>
   <td><?php echo $type['PokemonName']; ?></td>
