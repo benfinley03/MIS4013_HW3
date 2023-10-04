@@ -20,6 +20,7 @@
         <a class="nav-link" href="pokemon.php">Pokemon</a>
         <a class="nav-link" href="type.php">Type</a>
         <a class="nav-link" href="moves.php">Moves</a>
+        <a class="nav-link" href="pokemon-moves.php">Pokemon Moves</a>
 
       </div>
     </div>
