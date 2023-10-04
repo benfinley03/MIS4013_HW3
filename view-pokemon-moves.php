@@ -23,11 +23,7 @@ while ($moves = $pokemonMoves->fetch_assoc()) {
     </div>
   </div>
   <tr>
-    <td><?php echo $moves['PokemonName']; ?></td>
-    <td><?php echo $moves['MoveName']; ?></td>
-    <td><?php echo $moves['MovePower']; ?></td>
-    <td><?php echo $moves['MoveAccuracy']; ?></td>
-   
+
   </tr>
 <?php  
 }
