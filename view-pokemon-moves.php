@@ -1,6 +1,6 @@
 <h1>Pokemon Moves</h1>
 <?php
-while ($poke = $pokemon->fetch_assoc()) {
+while ($pokemove = $pokemon->fetch_assoc()) {
 ?>
   <div <div class="accordion">
     <div class="accordion-item">
