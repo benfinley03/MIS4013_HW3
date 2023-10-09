@@ -11,12 +11,12 @@ while ($pokemove = $poke->fetch_assoc()) {
       <p class = "card-text">
       <ul class="list-group">
 <?php
-  $moves = selectPokemonMoves($move['MoveID']);
+  $moves = selectPokemonMoves($pokemonMoves['MoveID']);
 while ($pokemonMoves = $moves->fetch_assoc()) {
 ?> 
-  <li class="list-group-item"><?php echo $move['MoveName']; ?></li>
-  <li class="list-group-item"><?php echo $move['MovePower']; ?></li>
-  <li class="list-group-item"><?php echo $move['MoveAccuracy']; ?></li>
+  <li class="list-group-item"><?php echo $pokemonMoves['MoveName']; ?></li>
+  <li class="list-group-item"><?php echo $pokemonMoves['MovePower']; ?></li>
+  <li class="list-group-item"><?php echo $pokemonMoves['MoveAccuracy']; ?></li>
 
 <?php  
 }
