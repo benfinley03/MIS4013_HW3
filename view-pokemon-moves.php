@@ -6,7 +6,6 @@ while ($pokemove = $poke->fetch_assoc()) {
     <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        <?php echo $move['PokemonID']; ?>
         <?php echo $move['PokemonName']; ?>
       </button>
       </h2>
