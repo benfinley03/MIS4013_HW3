@@ -2,7 +2,7 @@
 <div class = "containers">
   <div class = "card-group"
 <?php
-  $pokemove = $poke;
+  $pokemove = selectPokemon();
 while ($pokemove = $poke->fetch_assoc()) {
 ?>
   <div class = "card">
