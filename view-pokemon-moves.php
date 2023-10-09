@@ -14,9 +14,9 @@ while ($pokemove = $poke->fetch_assoc()) {
   $moves = selectPokemonMoves($move['MoveID']);
 while ($move = $moves->fetch_assoc()) {
 ?> 
-  <li class="list-group-item"><?php echo $moves['MoveName']; ?></li>
-  <li class="list-group-item"><?php echo $moves['MovePower']; ?></li>
-  <li class="list-group-item"><?php echo $moves['MoveAccuracy']; ?></li>
+  <li class="list-group-item"><?php echo $move['MoveName']; ?></li>
+  <li class="list-group-item"><?php echo $move['MovePower']; ?></li>
+  <li class="list-group-item"><?php echo $move['MoveAccuracy']; ?></li>
 
 <?php  
 }
