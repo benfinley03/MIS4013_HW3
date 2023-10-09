@@ -13,7 +13,7 @@ while ($pokemove = $poke->fetch_assoc()) {
       <div class="accordion-body">
       </div>
     </div>
-  </div>
+
     <ul class="list-group">
 <?php
 while ($move = $pokemonMoves->fetch_assoc()) {
@@ -24,6 +24,7 @@ while ($move = $pokemonMoves->fetch_assoc()) {
 
 <?php  
 }
+</div>
 }
 ?> 
     </tbody>
