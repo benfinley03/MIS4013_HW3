@@ -24,7 +24,9 @@ while ($move = $pokemonMoves->fetch_assoc()) {
 
 <?php  
 }
+?>
 </div>
+<?php
 }
 ?> 
     </tbody>
