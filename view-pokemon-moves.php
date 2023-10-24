@@ -1,26 +1,25 @@
 <h1>Pokemon Moves</h1>
-<div class = "containers">
-  <div class = "card-group"
-<?php
-  $pokemove = selectPokemon();
-while ($pokemove = $poke->fetch_assoc()) {
-?>
-  <div class = "card">
-    <div class = "card-body">
-      <h4 class = "card-title"><?php echo $poke['PokemonName']; ?></h4>
-      <p class = "card-text">
-      <ul class="list-group">
-<?php
-  $moves = selectPokemonMoves($pokemonMoves['MoveID']);
-while ($moves = $pokemonMoves->fetch_assoc()) {
-?> 
-  <li class="list-group-item"><?php echo $pokemonMoves['MoveName']; ?></li>
-  <li class="list-group-item"><?php echo $pokemonMoves['MovePower']; ?></li>
-  <li class="list-group-item"><?php echo $pokemonMoves['MoveAccuracy']; ?></li>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+      <th>ID</th>
+      <th>Name</th>
 
+      </tr>
+    </thead>
+    <tbody>
+<?php
+while ($move = $moves->fetch_assoc()) {
+?> 
+  <tr>
+    <td><?php echo $move['MoveID']; ?></td>
+    <td><?php echo $move['MoveName']; ?></td>
+
+  </tr>
 <?php  
 }
-}
 ?> 
-
+    </tbody>
+  </table>
 </div>
