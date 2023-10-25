@@ -7,35 +7,20 @@ while ($move = $pokemonMoves->fetch_assoc()) {
     <div class = "card-body">
       <h5 class = "card-title"><?php echo $move['PokemonName']; ?></h5>
       <p class = "card-text">
+      <ul class = "list-group">
 
 <?php
-  $pokemove = selectMovesOfPokemon()
-}
-  <table class="table">
-    <thead>
-      <tr>
-      <th>Pokemon ID</th>
-      <th>PokemonName</th>
-      <th>MoveName</th>
-      <th>MovePower</th>
-      <th>Move Accuracy</th>
-      </tr>
-    </thead>
-    <tbody>
+  $pokemove = selectPokemonMoves($move['PokemonID']);
+  while ($move = $pokemove->fetch_assoc()) {
+?>
+  <li class = "list-group-item"><?php echo $move['PokemonID']; ?><?php echo $move['PokemonName']; ?><?php echo $move['MoveName']; ?><?php echo $move['MovePower']; ?><?php echo $move['MoveAccuracy']; ?></li>
 <?php
-while ($move = $pokemonMoves->fetch_assoc()) {
-?> 
-  <tr>
-  <td><?php echo $move['PokemonID']; ?></td>
-  <td><?php echo $move['PokemonName']; ?></td>
-  <td><?php echo $move['MoveName']; ?></td>
-  <td><?php echo $move['MovePower']; ?></td>
-  <td><?php echo $move['MoveAccuracy']; ?></td>
-
-  </tr>
-<?php  
+  }
+?>
+      </ul>
+      </p>
+    </div>
+  </div>
 }
-?> 
-    </tbody>
-  </table>
+
 </div>
