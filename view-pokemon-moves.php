@@ -13,7 +13,7 @@ while ($move = $pokemonMoves->fetch_assoc()) {
   $pokemove = selectPokemonMoves($move['PokemonID']);
   while ($move = $pokemove->fetch_assoc()) {
 ?>
-  <li class = "list-group-item"><?php echo $move['MoveName']; ?><?php echo $move['MovePower']; ?><?php echo $move['MoveAccuracy']; ?></li>
+  <li class = "list-group-item"><?php echo $move['MoveName']; ?>: Power - <?php echo $move['MovePower']; ?>, Accuracy - <?php echo $move['MoveAccuracy']; ?></li>
 <?php
   }
 ?>
