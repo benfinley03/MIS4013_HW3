@@ -26,9 +26,7 @@ while ($move = $moves->fetch_assoc()) {
     <td><?php echo $move['MoveID']; ?></td>
     <td><?php echo $move['MoveName']; ?></td>
 
-  </tr>
-
-   <td>
+    <td>
     <form method = "post" action="">
       <input type="hidden" name="mID" value = "<?php echo $move['MoveID']; ?>">
       <input type="hidden" name="actionType" value="Delete">
@@ -39,6 +37,10 @@ while ($move = $moves->fetch_assoc()) {
       </button>
     </form>
   </td>
+    
+  </tr>
+
+   
 <?php  
 }
 ?> 
