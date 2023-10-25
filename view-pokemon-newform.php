@@ -24,6 +24,10 @@
             <label for="pDesc" class="form-label">Pokemon Description</label>
             <input type="text" class="form-control" id="pDesc" name="pDesc">
           </div>
+            <div class="mb-3">
+            <label for="pType" class="form-label">Pokemon Type</label>
+            <input type="text" class="form-control" id="pType" name="pType">
+          </div>
             <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
