@@ -36,6 +36,12 @@ while ($type = $types->fetch_assoc()) {
       </button>
     </form>
   </td>
+
+  <td>
+    <?php
+      // include "view-types-editform";
+    ?>
+  </td>
   </tr>
 <?php  
 }
