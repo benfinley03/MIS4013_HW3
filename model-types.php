@@ -28,11 +28,11 @@ function insertType($tName) {
 }
 
 
-function updateType($pName, $pDesc, $pID) {
+function updateType($tName, $tID) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE `Type` SET `TypeID`='[value-1]',`TypeName`='[value-2]' WHERE 1");
-        $stmt->bind_param("ssi", $pName, $pDesc, $pID);
+        $stmt = $conn->prepare("UPDATE `Type` SET `TypeName`=? WHERE TypeID = ?");
+        $stmt->bind_param("si", $tName, $tID);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -43,11 +43,11 @@ function updateType($pName, $pDesc, $pID) {
 }
 
 
-function deletePokemon($pID) {
+function deleteType($tID) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("DELETE FROM `Pokemon` WHERE `PokemonID` = ?");
-        $stmt->bind_param("i", $pID);
+        $stmt = $conn->prepare("DELETE FROM `Type` WHERE `TypeID` = ?");
+        $stmt->bind_param("i", $tID);
         $success = $stmt->execute();
         $conn->close();
         return $success;
