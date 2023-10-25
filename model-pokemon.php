@@ -12,7 +12,6 @@ function selectPokemon() {
         throw $e;
     }
 }
-?>
 
 function insertPokemon($pName, $pDesc) {
     try {
@@ -57,3 +56,5 @@ function deletePokemon($pID) {
         throw $e;
     }
 }
+
+?>
