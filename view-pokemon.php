@@ -40,10 +40,9 @@ while ($poke = $pokemon->fetch_assoc()) {
 
     <td>
       <?php
-        include "view-pokemon-editform.php";
+        <!-- include "view-pokemon-editform.php"; -->
       ?>
     </td>
-  <!--
     <td><a href="types-of-pokemon.php?id=<?php echo $poke['PokemonID']; ?>">Type</a></td>
     <td>
       <form method = "post" action="moves-of-pokemon.php">
@@ -51,7 +50,6 @@ while ($poke = $pokemon->fetch_assoc()) {
         <button type="submit" class="btn btn-primary">Moves</button>
       </form>
     </td>
-  //-->
   </tr>
 <?php  
 }
