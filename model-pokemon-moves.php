@@ -60,12 +60,12 @@ function selectPokemonForInput() {
         throw $e;
     }
 }
-
-function insertMoveset($msPokemonKey, $msMoveKey, $msName, $msPower, $msAccuracy) {
+<!-- $msPokemonKey, -->
+function insertMoveset($msMoveKey, $msName, $msPower, $msAccuracy) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `Moves` (`MoveID`, `MoveName`, `MovePower`, `MoveAccuracy`) VALUES (?, ?, ?, ?)", "INSERT INTO `Pokemon`);
-        $stmt->bind_param("isii", $mName, $mPower, $mAccuracy);
+        $stmt = $conn->prepare("INSERT INTO `Moves` (`MoveID`, `MoveName`, `MovePower`, `MoveAccuracy`) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("isii", $msMoveKey, $msName, $msPower, $msAccuracy);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -76,7 +76,7 @@ function insertMoveset($msPokemonKey, $msMoveKey, $msName, $msPower, $msAccuracy
 }
 
 
-function updateMove($mName, $mPower, $mAccuracy, $mID) {
+function updateMove($mName, $mPower, $mAccuracy, $msMoveKey) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `Moves` SET `MoveName` = ?, `MovePower` = ?, `MoveAccuracy`= ? WHERE `MoveID` = ?");
