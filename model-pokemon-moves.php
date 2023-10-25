@@ -61,11 +61,11 @@ function selectPokemonForInput() {
     }
 }
 // -- $msPokemonKey, 
-function insertMoveset($msMoveKey, $msName, $msPower, $msAccuracy) {
+function insertPokeMove($pmPID, $pmMID, $pmLL) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `Moves` (`MoveID`, `MoveName`, `MovePower`, `MoveAccuracy`) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("isii", $msMoveKey, $msName, $msPower, $msAccuracy);
+        $stmt = $conn->prepare("INSERT INTO `PokeMove_Relationship` (`PokemonID`, `MoveID`, `PMRLevel') VALUES (?, ?, ?)");
+        $stmt->bind_param("iii", $pmPID, $pmMID, $pmLL);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -76,11 +76,11 @@ function insertMoveset($msMoveKey, $msName, $msPower, $msAccuracy) {
 }
 
 
-function updateMoveset($mName, $mPower, $mAccuracy, $msMoveKey) {
+function updatePokeMove($pmPID, $pmMID, $pmLL, $pmID) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE `Moves` SET `MoveName` = ?, `MovePower` = ?, `MoveAccuracy`= ? WHERE `MoveID` = ?");
-        $stmt->bind_param("siii", $mName, $mPower, $mAccuracy, $mID);
+        $stmt = $conn->prepare("UPDATE `PokeMove_Relationship` SET `PokemonID` = ?, `MoveID` = ?, `PMRLevel' = ? WHERE `PokeMoveID` = ?");
+        $stmt->bind_param("iiii", $pmPID, $pmMID, $pmLL, $pmID);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -91,11 +91,11 @@ function updateMoveset($mName, $mPower, $mAccuracy, $msMoveKey) {
 }
 
 
-function deleteMoveset($mID) {
+function deleteMoveset($pmID) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("DELETE FROM `Moves` WHERE `MoveID` = ?");
-        $stmt->bind_param("i", $mID);
+        $stmt = $conn->prepare("DELETE FROM `PokeMove_Relationship` WHERE `PokeMoveID` = ?");
+        $stmt->bind_param("i", $pmID);
         $success = $stmt->execute();
         $conn->close();
         return $success;
