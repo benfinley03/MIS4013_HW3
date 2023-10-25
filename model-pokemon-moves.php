@@ -17,7 +17,6 @@ function selectMoveOfPokemon($mid) {
     }
 }
 
-<?php
 function selectPokemonMoves() {
     try {
         $conn = get_db_connection();
@@ -33,5 +32,4 @@ From Moves m JOIN PokeMove_Relationship pm on m.MoveID = pm.MoveID
         throw $e;
     }
 }
-?>
 ?>
