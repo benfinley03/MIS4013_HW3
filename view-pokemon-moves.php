@@ -1,5 +1,7 @@
 <h1>Pokemon Moves</h1>
-<div class="table-responsive">
+<div class="card-group">
+<?php
+while ($pokemon
   <table class="table">
     <thead>
       <tr>
