@@ -1,5 +1,13 @@
+<div class = "row">
+  <div class = "col">
 <h1>Moves</h1>
-<div class="table-responsive">
+  </div>
+  <div class = "col-auto">
+<?php
+include "view-moves-newform.php";
+?>
+  </div>
+</div><div class="table-responsive">
   <table class="table">
     <thead>
       <tr>
