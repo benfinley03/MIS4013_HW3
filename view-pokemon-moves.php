@@ -2,13 +2,18 @@
 <div class="card-group">
 
 <?php
-while ($move = $moves->fetch_assoc()) {
+$pokemove = selectMoveOfPokemon();
+while ($pokemonMoves = $pokemove->fetch_assoc()) {
 ?> 
     <div class="card">
     <div class="card-body">
-      <h5 class="card-title"><?php echo $move['MoveName']; ?></h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      <h5 class="card-title"><?php echo $pokeMove['PokemonName']; ?></h5>
+    <p class="card-text">
+<?php
+    
+?>
+        </p>
+
     </div>
   </div>
 
