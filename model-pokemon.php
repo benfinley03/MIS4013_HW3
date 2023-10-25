@@ -2,7 +2,7 @@
 function selectPokemon() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT PokemonName, PokemonDesc FROM Pokemon;");
+        $stmt = $conn->prepare("SELECT PokemonID, PokemonName, PokemonDesc FROM Pokemon;");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
