@@ -16,9 +16,8 @@ if (isset($_POST['actionType'])) {
         echo '<div class="alert alert-danger" role="alert">Error</div>';
       }
       break;
-
     case "Delete":
-      if (deletePokemon($_POST['pID'])
+      if (deletePokemon($_POST['pID'])) 
       {
         echo '<div class="alert alert-success" role="alert">Pokemon Deleted.</div>';
       } else 
