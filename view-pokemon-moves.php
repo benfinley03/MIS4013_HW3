@@ -1,7 +1,7 @@
 <h1>Pokemon Moves</h1>
 <div class="card-deck">
 <?php
-while ($move = $pokemonMoves->fetch_assoc()) {
+while ($move = $singlePoke->fetch_assoc()) {
 ?>
   <div class = "card">
     <div class = "card-body">
