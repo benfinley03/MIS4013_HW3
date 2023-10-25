@@ -10,10 +10,10 @@ if (isset($_POST['actionType'])) {
     case "Add":
       if (insertPokemon($_POST['pName'], $_POST['pDesc']))
       {
-        echo '<div class="alert alert-success" role="alert">Pokemon Added.</div>'
+        echo '<div class="alert alert-success" role="alert">Pokemon Added.</div>';
       } else 
       {
-        echo '<div class="alert alert-danger" role="alert">Error</div>'
+        echo '<div class="alert alert-danger" role="alert">Error</div>';
       }
       break;
   }
