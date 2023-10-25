@@ -39,9 +39,7 @@ while ($poke = $pokemon->fetch_assoc()) {
     </td>
 
     <td>
-      <?php
-        include "view-pokemon-editform.php";
-      ?>
+
     </td>
     
     <td><a href="types-of-pokemon.php?id=<?php echo $poke['PokemonID']; ?>">Type</a></td>
