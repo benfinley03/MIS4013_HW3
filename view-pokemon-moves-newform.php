@@ -17,7 +17,7 @@
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="pmPID" class="form-label">Pokemon ID</label>
+            <label for="pmPID" class="form-label">Pokemon</label>
 <?php
     $PokemonList = selectPokemonForInput();   
     include "view-pokemon-input-list.php";
