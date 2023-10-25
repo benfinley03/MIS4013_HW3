@@ -17,6 +17,7 @@ include "view-pokemon-newform.php";
       <th>Description</th>
       <th></th>
       <th></th>
+      <th></th>
       </tr>
     </thead>
     <tbody>
@@ -28,7 +29,7 @@ while ($poke = $pokemon->fetch_assoc()) {
     <td><?php echo $poke['PokemonDesc']; ?></td>
     <td>
       <form method = "post" action="">
-        <input type="hidden" name="mid" value = "<?php echo $poke['PokemonID']; ?>">
+        <input type="hidden" name="pID" value = "<?php echo $poke['PokemonID']; ?>">
         <input type="hidden" name="actionType" value="Delete">
         <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure?');">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
