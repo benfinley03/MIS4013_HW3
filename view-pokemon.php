@@ -12,6 +12,7 @@ include "view-pokemon-newform.php";
   <table class="table">
     <thead>
       <tr>
+      <th>ID</th>
       <th>Name</th>
       <th>Description</th>
       <th></th>
@@ -23,6 +24,7 @@ include "view-pokemon-newform.php";
 while ($poke = $pokemon->fetch_assoc()) {
 ?> 
   <tr>
+    <td><?php echo $poke['PokemonID']; ?></td>
     <td><?php echo $poke['PokemonName']; ?></td>
     <td><?php echo $poke['PokemonDesc']; ?></td>
   
