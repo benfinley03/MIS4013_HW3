@@ -14,10 +14,8 @@ include "view-pokemon-newform.php";
       <tr>
       <th>Name</th>
       <th>Description</th>
-      <th>Delete</th>
       <th>Edit</th>
-      <th>Type</th>
-      <th>Moves</th>
+      <th>Delete</th>
       </tr>
     </thead>
     <tbody>
@@ -27,6 +25,13 @@ while ($poke = $pokemon->fetch_assoc()) {
   <tr>
     <td><?php echo $poke['PokemonName']; ?></td>
     <td><?php echo $poke['PokemonDesc']; ?></td>
+    
+    <td>
+      <?php
+        include "view-pokemon-editform.php";
+      ?>
+    </td>
+  
     <td>
       <form method = "post" action="">
         <input type="hidden" name="pID" value = "<?php echo $poke['PokemonID']; ?>">
@@ -37,16 +42,6 @@ while ($poke = $pokemon->fetch_assoc()) {
           </svg>
         </button>
       </form>
-    </td>
-
-    <td>
-<div class = "row">
-  <div class = "col-auto">
-<?php
-include "view-pokemon-editform.php";
-?>
-  </div>
-</div>
     </td>
     
     <td><a href="types-of-pokemon.php?id=<?php echo $poke['PokemonID']; ?>">Type</a></td>
