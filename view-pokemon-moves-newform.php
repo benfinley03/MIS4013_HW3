@@ -24,12 +24,16 @@
 ?>
           </div>
           <div class="mb-3">
-            <label for="pmMID" class="form-label">Move ID</label>
-            <input type="integer" class="form-control" id="pmMID" name="pmMID">
+            <label for="mID" class="form-label">Move ID</label>
+            <input type="integer" class="form-control" id="mID" name="mID">
           </div>
           <div class="mb-3">
-            <label for="pmLL" class="form-label">Level Learned</label>
-            <input type="integer" class="form-control" id="pmLL" name="pmLL">
+            <label for="mName" class="form-label">Move Name</label>
+            <input type="text" class="form-control" id="mName" name="mName">
+          </div>
+          <div class="mb-3">
+            <label for="mAccuracy" class="form-label">Move Accuracy</label>
+            <input type="integer" class="form-control" id="mAccuracy" name="mAccuracy">
           </div>
             <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
