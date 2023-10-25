@@ -13,6 +13,8 @@ include "view-moves-newform.php";
       <tr>
       <th>ID</th>
       <th>Name</th>
+      <th></th>
+      <th></th>
 
       </tr>
     </thead>
