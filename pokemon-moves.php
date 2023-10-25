@@ -5,7 +5,7 @@ require_once("model-pokemon.php");
 $pageTitle = "Pokemon Moves";
 include "view-header.php";
 $pokemonMoves = selectPokemonMoves();
-$pokemonMovesCondition = selectMoveOfPokemon($move['PokemonID']);
+$pokemonMovesCondition = selectMoveOfPokemon(['PokemonID']);
 $singlePoke = selectPokemon();
 include "view-pokemon-moves.php";
 include "view-footer.php";
