@@ -23,7 +23,7 @@ function insertPokemon($pName, $pDesc, $pType) {
         $success = $stmt->execute();
         $success2 = $stmt2->execute();
         $conn->close();
-        return $success, $success2;
+        return [$success, $success2];
     } catch (Exception $e) {
         $conn->close();
         throw $e;
