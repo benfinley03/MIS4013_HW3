@@ -39,7 +39,7 @@ while ($type = $types->fetch_assoc()) {
 
   <td>
     <?php
-      // include "view-types-editform";
+      include "view-types-editform";
     ?>
   </td>
   </tr>
