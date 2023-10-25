@@ -24,7 +24,7 @@ while ($poke = $pokemon->fetch_assoc()) {
 ?> 
   <tr>
     <td><?php echo $poke['PokemonName']; ?></td>
-    <td><?php echo $poke['PokemonDesc']; ?></td>
+    <td></td>
     <td>
       <form method = "post" action="">
         <input type="hidden" name="pID" value = "<?php echo $poke['PokemonID']; ?>">
