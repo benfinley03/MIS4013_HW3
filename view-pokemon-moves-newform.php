@@ -31,6 +31,10 @@
             <label for="mName" class="form-label">Move Name</label>
             <input type="text" class="form-control" id="mName" name="mName">
           </div>
+        <div class="mb-3">
+            <label for="mPower" class="form-label">Move Power</label>
+            <input type="integer" class="form-control" id="mPower" name="mPower">
+          </div>
           <div class="mb-3">
             <label for="mAccuracy" class="form-label">Move Accuracy</label>
             <input type="integer" class="form-control" id="mAccuracy" name="mAccuracy">
