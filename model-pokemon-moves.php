@@ -61,11 +61,11 @@ function selectPokemonForInput() {
     }
 }
 // -- $msPokemonKey, 
-function insertPokeMove($pmPID, $pmMID, $pmLL) {
+function insertPokeMove($mName, $mPower, $mAccuracy) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `PokeMove_Relationship` (`PokemonID`, `MoveID`, `PMRLevel') VALUES (?, ?, ?)");
-        $stmt->bind_param("iii", $pmPID, $pmMID, $pmLL);
+        $stmt = $conn->prepare("INSERT INTO `Moves` (`MoveName`, `MovePower`, `MoveAccuracy') VALUES (?, ?, ?)");
+        $stmt->bind_param("sii", $pmPID, $pmMID, $pmLL);
         $success = $stmt->execute();
         $conn->close();
         return $success;
