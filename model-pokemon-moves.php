@@ -50,7 +50,7 @@ function selectPokemonMovesForInput() {
 function selectPokemonForInput() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("Select PokemonID, PokemonName From `Pokemon` Order by PokemonName");
+        $stmt = $conn->prepare("Select PokemonID, PokemonName From Pokemon Order by PokemonName");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
