@@ -13,14 +13,17 @@ function selectPokemon() {
     }
 }
 
-function insertPokemon($pName, $pDesc) {
+function insertPokemon($pName, $pDesc, $pType) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `Pokemon` (`PokemonName`, `PokemonDesc`) VALUES (?, ?)");
+        $stmt2 = $conn->prepare("INSERT INTO `PokeType_Relationship` (`TypeID`) VALUES (?)");
         $stmt->bind_param("ss", $pName, $pDesc);
+        $stmt2->bind_param("i", $pType);
         $success = $stmt->execute();
+        $success2 = $stmt2->execute();
         $conn->close();
-        return $success;
+        return $success, $success2;
     } catch (Exception $e) {
         $conn->close();
         throw $e;
