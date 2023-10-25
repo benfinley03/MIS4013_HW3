@@ -1,35 +1,30 @@
 <h1>Pokemon Moves</h1>
-<div class="card-group">
-
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+      <th>Pokemon ID</th>
+      <th>PokemonName</th>
+      <th>MoveName</th>
+      <th>MovePower</th>
+      <th>Move Accuracy</th>
+      </tr>
+    </thead>
+    <tbody>
 <?php
-$pokemove = selectMoveOfPokemon($pokemonMoves['PokemonID']);
-while ($pokemonMoves = $pokemove->fetch_assoc()) {
+while ($move = $pokemonMoves->fetch_assoc()) {
 ?> 
-    <div class="card">
-    <div class="card-body">
-      <h5 class="card-title"><?php echo $pokeMove['PokemonName']; ?></h5>
-    <p class="card-text">
-        <ul classs = "list-group">
-<?php
-    $moves = selectMoves($pokemove['MoveID']);
-    while ($pokemonMoves = $pokemove->fetch_assoc()) {
-?>
-  <li class = "list-group-item"><?php echo $pokemove['PokemonName']; ?> - <?php echo $pokemove['MoveName']; ?> - <?php echo $pokemove['MoveName']; ?> - <?php echo $pokemove['MovePower']; ?> - <?php echo $pokemove['MoveAccuracy']; ?></li>
-  <li class = "list-group-item"><?php echo $pokemove['MoveName']; ?></li>
-  <li class = "list-group-item"><?php echo $pokemove['MovePower']; ?></li>
-  <li class = "list-group-item"><?php echo $pokemove['MoveAccuracy']; ?></li>
-<?php
-    
-    }
-?>
-        </ul>
-        </p>
+  <tr>
+  <td><?php echo $move['PokemonID']; ?></td>
+  <td><?php echo $move['PokemonName']; ?></td>
+  <td><?php echo $move['MoveName']; ?></td>
+  <td><?php echo $move['MovePower']; ?></td>
+  <td><?php echo $move['MoveAccuracy']; ?></td>
 
-    </div>
-  </div>
-
+  </tr>
 <?php  
 }
 ?> 
+    </tbody>
+  </table>
 </div>
-
