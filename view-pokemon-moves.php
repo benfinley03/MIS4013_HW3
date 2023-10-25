@@ -10,7 +10,12 @@ while ($pokemonMoves = $pokemove->fetch_assoc()) {
       <h5 class="card-title"><?php echo $pokeMove['PokemonName']; ?></h5>
     <p class="card-text">
 <?php
+    $moves = selectMoves($pokemove['MoveID']);
+    while ($pokemonMoves = $pokemove->fetch_assoc()) {
+?>
+<?php
     
+    }
 ?>
         </p>
 
