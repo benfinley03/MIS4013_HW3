@@ -32,7 +32,7 @@ function updatePokemon($pName, $pDesc, $pID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `Pokemon` SET `PokemonName` = ?, `PokemonDesc` = ? WHERE `PokemonID` = ?");
-        $stmt->bind_param("ssI", $pName, $pDesc, $pID);
+        $stmt->bind_param("ssi", $pName, $pDesc, $pID);
         $success = $stmt->execute();
         $conn->close();
         return $success;
