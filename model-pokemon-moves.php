@@ -60,7 +60,7 @@ function selectPokemonForInput() {
         throw $e;
     }
 }
-<!-- $msPokemonKey, -->
+// -- $msPokemonKey, 
 function insertMoveset($msMoveKey, $msName, $msPower, $msAccuracy) {
     try {
         $conn = get_db_connection();
