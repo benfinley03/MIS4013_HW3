@@ -76,7 +76,7 @@ function insertMoveset($msMoveKey, $msName, $msPower, $msAccuracy) {
 }
 
 
-function updateMove($mName, $mPower, $mAccuracy, $msMoveKey) {
+function updateMoveset($mName, $mPower, $mAccuracy, $msMoveKey) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `Moves` SET `MoveName` = ?, `MovePower` = ?, `MoveAccuracy`= ? WHERE `MoveID` = ?");
@@ -91,7 +91,7 @@ function updateMove($mName, $mPower, $mAccuracy, $msMoveKey) {
 }
 
 
-function deletePokemon($mID) {
+function deleteMoveset($mID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("DELETE FROM `Moves` WHERE `MoveID` = ?");
