@@ -14,7 +14,8 @@ include "view-pokemon-newform.php";
       <tr>
       <th>Name</th>
       <th>Description</th>
-
+      <th></th>
+      <th></th>
       </tr>
     </thead>
     <tbody>
@@ -37,9 +38,7 @@ while ($poke = $pokemon->fetch_assoc()) {
     </td>
 
     <td>
-      <?php
-        include "view-pokemon-editform.php";
-      ?>
+
     </td>
     <td><a href="types-of-pokemon.php?id=<?php echo $poke['PokemonID']; ?>">Type</a></td>
     <td>
