@@ -1,5 +1,5 @@
 <?php
-function selectMoveOfPokemon($mid) {
+function selectMoveOfPokemon() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("Select p.PokemonName, m.MoveName, m.MovePower, m.MoveAccuracy
