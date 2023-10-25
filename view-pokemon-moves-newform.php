@@ -18,7 +18,10 @@
         <form method="post" action="">
           <div class="mb-3">
             <label for="pmPID" class="form-label">Pokemon ID</label>
-            <input type="integer" class="form-control" id="pmPID" name="pmPID">
+<?php
+    $PokemonList = selectPokemonForInput();   
+    include "view-pokemon-input-list.php";
+?>
           </div>
           <div class="mb-3">
             <label for="pmMID" class="form-label">Move ID</label>
