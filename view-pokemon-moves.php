@@ -1,5 +1,5 @@
 <h1>Pokemon Moves</h1>
-<div class="card-group">
+<div class="card-deck">
 <?php
 while ($move = $pokemonMoves->fetch_assoc()) {
 ?>
