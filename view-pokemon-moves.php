@@ -10,8 +10,8 @@ while ($move = $singlePoke->fetch_assoc()) {
       <ul class = "list-group">
 
 <?php
-  $pokemove = selectPokemonMoves($move['PokemonID']);
-  while ($move = $pokemove->fetch_assoc()) {
+  $pokemove = selectMoveOfPokemon($move['PokemonID']);
+  while ($pokemonMovesCondition = $pokemove->fetch_assoc()) {
 ?>
   <li class = "list-group-item"><?php echo $move['MoveName']; ?>: Power - <?php echo $move['MovePower']; ?>, Accuracy - <?php echo $move['MoveAccuracy']; ?></li>
 <?php
