@@ -14,8 +14,7 @@ include "view-pokemon-newform.php";
       <tr>
       <th>Name</th>
       <th>Description</th>
-      <th></th>
-      <th></th>
+
       </tr>
     </thead>
     <tbody>
