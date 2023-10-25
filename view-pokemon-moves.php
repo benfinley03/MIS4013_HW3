@@ -2,7 +2,7 @@
 <div class="card-group">
 
 <?php
-$pokemove = selectMoveOfPokemon();
+$pokemove = selectMoveOfPokemon($pokemonMoves['PokemonID']);
 while ($pokemonMoves = $pokemove->fetch_assoc()) {
 ?> 
     <div class="card">
