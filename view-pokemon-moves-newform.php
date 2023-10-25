@@ -20,7 +20,7 @@
             <label for="pmPID" class="form-label">Pokemon ID</label>
 <?php
     $PokemonList = selectPokemonForInput();   
-    //include "view-pokemon-input-list.php";
+    include "view-pokemon-input-list.php";
 ?>
           </div>
           <div class="mb-3">
