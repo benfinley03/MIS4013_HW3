@@ -37,6 +37,11 @@ while ($move = $moves->fetch_assoc()) {
       </button>
     </form>
   </td>
+<td>
+  <?php
+    // include "view-moves-editform.php";
+  ?>
+</td>
     
   </tr>
 
