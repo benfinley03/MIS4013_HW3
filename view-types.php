@@ -4,7 +4,7 @@
   </div>
   <div class = "col-auto">
 <?php
-include "view-type-newform.php";
+include "view-types-newform.php";
 ?>
   </div>
 </div>
